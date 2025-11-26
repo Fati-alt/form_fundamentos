@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Fundamentos de las Matemáticas</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- ===== NAVEGACIÓN ===== -->
+  <nav>
+    <div class="logo"><i class="fas fa-square-root-variable"></i> Fundamentos by Profe Mau</div>
+    <div class="nav-links">
+      <a href="#proposiciones">Proposiciones</a>
+      <a href="#conectores">Conectores</a>
+      <a href="#conjuntos">Conjuntos</a>
+      <a href="#axiomas-reales">Axiomas ℝ</a>
+      <a href="#ecuaciones">Ecuaciones</a>
+      <a href="#trigonometria">Trigonometría</a>
+    </div>
+    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Cambiar tema">
+      <i class="fas fa-moon" id="theme-icon"></i>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Fundamentos de las Matemáticas</h1>
+    <p>Todo lo que me hubiera gustado saber antes de iniciar el curso. Una guía para pasar(esperemos) en mi materia favorita.</p>
+    <span class="hero-subtitle">
+      <i class="fas fa-sparkles"></i>
+      Hecho con amor y algunas desveladas 💙
+    </span>
+    <div class="scroll-indicator">
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL  -->
+  <main>
+    <!-- SECCIÓN 1: PROPOSICIONES -->
+    <article class="section" id="proposiciones">
+      <div class="section-header">
+        <div class="section-icon"><i class="fas fa-comment-dots"></i></div>
+        <div class="section-title">
+          <span class="section-number">SECCIÓN 01</span>
+          <h2>Proposiciones</h2>
+        </div>
+      </div>
+      <div class="content">
+        <h3>Conceptos fundamentales</h3>
+        <ul>
+          <li><strong>Proposición:</strong> Afirmación que solo puede ser <span class="formula">Verdadera (V)</span> o <span class="formula">Falsa (F)</span>, nunca ambas</li>
+          <li><strong>Notación:</strong> Usamos letras minúsculas: <span class="formula">p, q, r, s...</span></li>
+          <li><strong>Predicado:</strong> <span class="formula">P(x)</span> — proposición que depende de una variable x. Si <span class="formula">x ∈ U</span> (universo), P(x) es una proposición</li>
+        </ul>
+
+        <h3>Tipos de proposiciones</h3>
+        <ul>
+          <li><strong>Tautología:</strong> SIEMPRE verdadera → <span class="formula">p ∨ ¬p</span></li>
+          <li><strong>Contradicción:</strong> SIEMPRE falsa  → <span class="formula">p ∧ ¬p</span></li>
+          <li><strong>Contingente:</strong> Su valor depende de las proposiciones que la componen <span class="formula">p,q, etc.</span></li>
+        </ul>
+
+        <div class="tip-box">
+          <strong><i class="fas fa-lightbulb"></i> Tip importante</strong>
+          <p>Si en la columna final de una tabla de verdad todo es V → Tautología. Si todo es F → Contradicción. Si hay mezcla → Contingente.</p>
+        </div>
+
+        <h3>Proposiciones equivalentes</h3>
+        <p>Dos proposiciones son <strong>equivalentes</strong> (<span class="formula">≡</span>) si tienen los mismos valores de verdad en todos los casos posibles.</p>
+      </div>
+    </article>
+
+    <!--SECCIÓN 2: CONECTORES LÓGICOS -->
+    <article class="section" id="conectores">
+      <div class="section-header">
+        <div class="section-icon"><i class="fas fa-link"></i></div>
+        <div class="section-title">
+          <span class="section-number">SECCIÓN 02</span>
+          <h2>Conectores Lógicos</h2>
+        </div>
+      </div>
+      <div class="content">
+        <h3>Los conectores más esenciales</h3>
+        <ul>
+          <li><strong>Negación</strong> <span class="formula">¬p</span> — Invierte el valor de p</li>
+          <li><strong>Conjunción (AND)</strong> <span class="formula">p ∧ q</span> — V solo si AMBOS son V</li>
+          <li><strong>Disyunción (OR)</strong> <span class="formula">p ∨ q</span> — V si AL MENOS UNO es V</li>
+          <li><strong>Implicación</strong> <span class="formula">p → q</span> — F únicamente cuando p=V y q=F</li>
+          <li><strong>Equivalencia</strong> <span class="formula">p ↔ q</span> — V si ambos tienen el MISMO valor</li>
+          <li><strong>NAND</strong> <span class="formula">¬(p ∧ q)</span> — V salvo cuando <span class="formula">p ∧ p</span> =V</li>
+          <li><strong>NOR</strong> <span class="formula">¬(p ∨ q)</span> — V solo cuando AMBOS son F</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong><i class="fas fa-star"></i> Regla de oro para la implicación</strong>
+          <p>En <span class="formula">p → q</span>: p es el antecedente, q es el consecuente. Solo es F cuando "prometes y no cumples" (p=V, q=F).</p>
+        </div>
+
+        <h3>Tablas de verdad</h3>
+        <div class="tip-box">
+           <strong><i class="fas fa-star"></i> Ojo ( para las tablas en booleano)</strong>
+         <p> 0 = Falso <div> 1 = Verdadero</div></p>
+        </div>
+        
+        <h4>Negación (¬p)</h4>
+        <table class="truth-table">
+          <tr><th>p</th><th>¬p</th></tr>
+          <tr><td class="true">V</td><td class="false">F</td></tr>
+          <tr><td class="false">F</td><td class="true">V</td></tr>
+        </table>
+
+        <h4>Conjunción (p ∧ q)</h4>
+        <table class="truth-table">
+          <tr><th>p</th><th>q</th><th>p ∧ q</th></tr>
+          <tr><td class="true">V</td><td class="true">V</td><td class="true">V</td></tr>
+          <tr><td class="true">V</td><td class="false">F</td><td class="false">F</td></tr>
+          <tr><td class="false">F</td><td class="true">V</td><td class="false">F</td></tr>
+          <tr><td class="false">F</td><td class="false">F</td><td class="false">F</td></tr>
+        </table>
+
+        <h4>Disyunción (p ∨ q)</h4>
+        <table class="truth-table">
+          <tr><th>p</th><th>q</th><th>p ∨ q</th></tr>
+          <tr><td class="true">V</td><td class="true">V</td><td class="true">V</td></tr>
+          <tr><td class="true">V</td><td class="false">F</td><td class="true">V</td></tr>
+          <tr><td class="false">F</td><td class="true">V</td><td class="true">V</td></tr>
+          <tr><td class="false">F</td><td class="false">F</td><td class="false">F</td></tr>
+        </table>
+
+        <h4>Implicación (p → q)</h4>
+        <table class="truth-table">
+          <tr><th>p</th><th>q</th><th>p → q</th></tr>
+          <tr><td class="true">V</td><td class="true">V</td><td class="true">V</td></tr>
+          <tr><td class="true">V</td><td class="false">F</td><td class="false">F</td></tr>
+          <tr><td class="false">F</td><td class="true">V</td><td class="true">V</td></tr>
+          <tr><td class="false">F</td><td class="false">F</td><td class="true">V</td></tr>
+        </table>
+
+        <h4>Equivalencia (p ↔ q)</h4>
+        <table class="truth-table">
+          <tr><th>p</th><th>q</th><th>p ↔ q</th></tr>
+          <tr><td class="true">V</td><td class="true">V</td><td class="true">V</td></tr>
+          <tr><td class="true">V</td><td class="false">F</td><td class="false">F</td></tr>
+          <tr><td class="false">F</td><td class="true">V</td><td class="false">F</td></tr>
+          <tr><td class="false">F</td><td class="false">F</td><td class="true">V</td></tr>
+        </table>
+
+        <h3>Reglas y equivalencias útiles</h3>
+        <ul>
+          <li><span class="formula">p → q ≡ ¬p ∨ q</span></li>
+          <li><span class="formula">p ↔ q ≡ (p → q) ∧ (q → p)</span></li>
+          <li><strong>De Morgan:</strong> <span class="formula">¬(p ∨ q) ≡ ¬p ∧ ¬q</span></li>
+          <li><strong>De Morgan:</strong> <span class="formula">¬(p ∧ q) ≡ ¬p ∨ ¬q</span></li>
+        </ul>
+
+        <h3>Cuantificadores</h3>
+        <ul>
+          <li><strong>Universal:</strong> <span class="formula">∀x ∈ U, P(x)</span> → "Para TODO x en U, P(x) se cumple"</li>
+          <li><strong>Existencial:</strong> <span class="formula">∃x ∈ U, P(x)</span> → "Existe AL MENOS UN x en U tal que P(x)"</li>
+        </ul>
+
+        <h4>Negación de cuantificadores</h4>
+        <ul>
+          <li><span class="formula">¬(∀x P(x)) ≡ ∃x ¬P(x)</span></li>
+          <li><span class="formula">¬(∃x P(x)) ≡ ∀x ¬P(x)</span></li>
+        </ul>
+
+        <div class="tip-box">
+          <strong><i class="fas fa-brain"></i> Nemotecnia</strong>
+          <p>Al negar: ∀ se convierte en ∃, y viceversa.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SECCIÓN 3: DEMOSTRACIONES  -->
+    <article class="section" id="demostraciones">
+      <div class="section-header">
+        <div class="section-icon"><i class="fas fa-check-double"></i></div>
+        <div class="section-title">
+          <span class="section-number">SECCIÓN 03</span>
+          <h2>Métodos de Demostración</h2>
+        </div>
+      </div>
+      <div class="content">
+        <h3>Demostración directa</h3>
+        <p>Partimos de las hipótesis y mediante pasos lógicos llegamos a la conclusión.</p>
+
+        <h3>Demostración indirecta (Contrapositiva)</h3>
+        <p>Para demostrar <span class="formula">p → q</span>, demostramos su contrapositiva <span class="formula">¬q → ¬p</span></p>
+        <ul>
+          <li>Son lógicamente equivalentes: <span class="formula">(p → q) ≡ (¬q → ¬p)</span></li>
+          <li>A veces es más fácil demostrar la contrapositiva</li>
+        </ul>
+
+        <h3>Demostración por contradicción (Reducción al absurdo)</h3>
+        <p>Suponemos que la negación de lo que queremos demostrar es verdadera y llegamos a una contradicción.</p>
+        <ul>
+          <li>Suponemos <span class="formula">¬p</span></li>
+          <li>Derivamos una contradicción <span class="formula">q ∧ ¬q</span></li>
+          <li>Concluimos que <span class="formula">p</span> debe ser verdadero</li>
+        </ul>
+
+        <div class="warning-box">
+          <strong><i class="fas fa-exclamation-triangle"></i> Cuidado</strong>
+          <p>No confundir contrapositiva con inversa. La inversa <span class="formula">¬p → ¬q</span> NO es equivalente a <span class="formula">p → q</span>.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- SECCIÓN 4: CONJUNTOS  -->
+    <article class="section" id="conjuntos">
+      <div class="section-header">
+        <div class="section-icon"><i class="fas fa-circle-nodes"></i></div>
+        <div class="section-title">
+          <span class="section-number">SECCIÓN 04</span>
+          <h2>Teoría de Conjuntos</h2>
+        </div>
+      </div>
+      <div class="content">
+        <h3>Conceptos básicos</h3>
+        <ul>
+          <li><strong>Conjunto:</strong> Colección bien definida de elementos</li>
+          <li><strong>Por extensión:</strong> <span class="formula">A = {1, 2, 3, 4}</span></li>
+          <li><strong>Por comprensión:</strong> <span class="formula">A = {x | x es par}</span></li>
+          <li><strong>Pertenencia:</strong> <span class="formula">a ∈ A</span> (a pertenece a A)</li>
+          <li><strong>No pertenencia:</strong> <span class="formula">a ∉ A</span></li>
+          <li><strong>Conjunto vacío:</strong> <span class="formula">∅ = { }</span></li>
+          <li><strong>Conjunto universal:</strong> <span class="formula">U</span></li>
+        </ul>
+
+        <h3>Subconjuntos</h3>
+        <ul>
+          <li><strong>Subconjunto:</strong> <span class="formula">A ⊆ B</span> si todo elemento de A está en B</li>
+          <li><strong>Subconjunto propio:</strong> <span class="formula">A ⊂ B</span> si A ⊆ B y A ≠ B</li>
+          <li><strong>Igualdad:</strong> <span class="formula">A = B ↔ (A ⊆ B) ∧ (B ⊆ A)</span></li>
+          <li><strong>Negación:</strong> <span class="formula">A ⊈ B</span> si existe <span class="formula">x ∈ A</span> tal que <span class="formula">x ∉ B</span></li>
+        </ul>
+
+        <div class="tip-box">
+          <strong><i class="fas fa-lightbulb"></i> Recuerda</strong>
+          <p>El conjunto vacío ∅ es subconjunto de TODOS los conjuntos: <span class="formula">∅ ⊆ A</span> siempre.</p>
+        </div>
+
+        <h3>Operaciones con conjuntos</h3>
+        <ul>
+          <li><strong>Unión:</strong> <span class="formula">A ∪ B = {x | x ∈ A ∨ x ∈ B}</span></li>
+          <li><strong>Intersección:</strong> <span class="formula">A ∩ B = {x | x ∈ A ∧ x ∈ B}</span></li>
+          <li><strong>Diferencia:</strong> <span class="formula">A \ B = {x | x ∈ A ∧ x ∉ B}</span></li>
+          <li><strong>Complemento:</strong> <span class="formula">Aᶜ = U \ A = {x | x ∈ U ∧ x ∉ A}</span></li>
+        </ul>
+
+        <h3>Propiedades de conjuntos</h3>
+        
+        <h4>Conmutativas</h4>
+        <ul>
+          <li><span class="formula">A ∪ B = B ∪ A</span></li>
+          <li><span class="formula">A ∩ B = B ∩ A</span></li>
+        </ul>
+
+        <h4>Asociativas</h4>
+        <ul>
+          <li><span class="formula">(A ∪ B) ∪ C = A ∪ (B ∪ C)</span></li>
+          <li><span class="formula">(A ∩ B) ∩ C = A ∩ (B ∩ C)</span></li>
+        </ul>
+
+        <h4>Distributivas</h4>
+        <ul>
+          <li><span class="formula">A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)</span></li>
+          <li><span class="formula">A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)</span></li>
+        </ul>
+
+        <h4>Identidad</h4>
+        <ul>
+          <li><span class="formula">A ∪ ∅ = A</span></li>
+          <li><span class="formula">A ∩ U = A</span></li>
+        </ul>
+
+        <h4>Complemento</h4>
+        <ul>
+          <li><span class="formula">A ∪ Aᶜ = U</span></li>
+          <li><span class="formula">A ∩ Aᶜ = ∅</span></li>
+          <li><span class="formula">(Aᶜ)ᶜ = A</span> (doble complemento)</li>
+          <li><span class="formula">∅ᶜ = U</span></li>
+          <li><span class="formula">Uᶜ = ∅</span></li>
+        </ul>
+
+        <h4>Leyes de De Morgan</h4>
+        <ul>
+          <li><span class="formula">(A ∪ B)ᶜ = Aᶜ ∩ Bᶜ</span></li>
+          <li><span class="formula">(A ∩ B)ᶜ = Aᶜ ∪ Bᶜ</span></li>
+        </ul>
+
+        <h4>Idempotencia</h4>
+        <ul>
+          <li><span class="formula">A ∪ A = A</span></li>
+          <li><span class="formula">A ∩ A = A</span></li>
+        </ul>
+
+        <h4>Absorción</h4>
+        <ul>
+          <li><span class="formula">A ∪ (A ∩ B) = A</span></li>
+          <li><span class="formula">A ∩ (A ∪ B) = A</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- SECCIÓN 5: AXIOMAS DE IGUALDAD -->
+    <article class="section" id="axiomas-igualdad">
+      <div class="section-header">
+        <div class="section-icon"><i class="fas fa-equals"></i></div>
+        <div class="section-title">
+          <span class="section-number">SECCIÓN 05</span>
+          <h2>Axiomas de la Igualdad</h2>
+        </div>
+      </div>
+      <div class="content">
+        <ul>
+          <li><strong>Reflexiva:</strong> <span class="formula">a = a</span> (todo es igual a sí mismo)</li>
+          <li><strong>Simétrica:</strong> Si <span class="formula">a = b</span> entonces <span class="formula">b = a</span></li>
+          <li><strong>Transitiva:</strong> Si <span class="formula">a = b</span> y <span class="formula">b = c</span> entonces <span class="formula">a = c</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- SECCIÓN 6: AXIOMAS DE LOS NÚMEROS REALES -->
+    <article class="section" id="axiomas-reales">
+      <div class="section-header">
+        <div class="section-icon"><i class="fas fa-infinity"></i></div>
+        <div class="section-title">
+          <span class="section-number">SECCIÓN 06</span>
+          <h2>Axiomas de los Números Reales</h2>
+        </div>
+      </div>
+      <div class="content">
+        <p>Los números reales <span class="formula">ℝ</span> satisfacen tres grupos de axiomas fundamentales.</p>
+
+        <h3>Axiomas de Campo</h3>
+        <p>Definen las operaciones de suma y multiplicación en ℝ.</p>
+
+        <div class="card-grid">
+          <div class="mini-card">
+            <h4>A1. Cerradura (Suma)</h4>
+            <p><span class="formula">a + b ∈ ℝ</span><br>La suma de dos reales es un real.</p>
+          </div>
+          <div class="mini-card">
+            <h4>A2. Conmutativa (Suma)</h4>
+            <p><span class="formula">a + b = b + a</span><br>El orden no altera la suma.</p>
+          </div>
+          <div class="mini-card">
+            <h4>A3. Asociativa (Suma)</h4>
+            <p><span class="formula">(a + b) + c = a + (b + c)</span><br>Agrupación libre.</p>
+          </div>
+          <div class="mini-card">
+            <h4>A4. Neutro (Suma)</h4>
+            <p><span class="formula">a + 0 = a</span><br>Existe el cero como neutro aditivo.</p>
+          </div>
+          <div class="mini-card">
+            <h4>A5. Inverso (Suma)</h4>
+            <p><span class="formula">a + (-a) = 0</span><br>Todo número tiene su opuesto.</p>
+          </div>
+          <div class="mini-card">
+            <h4>M1. Cerradura (Mult.)</h4>
+            <p><span class="formula">a · b ∈ ℝ</span><br>El producto de dos reales es real.</p>
+          </div>
+          <div class="mini-card">
+            <h4>M2. Conmutativa (Mult.)</h4>
+            <p><span class="formula">a · b = b · a</span><br>El orden no altera el producto.</p>
+          </div>
+          <div class="mini-card">
+            <h4>M3. Asociativa (Mult.)</h4>
+            <p><span class="formula">(a · b) · c = a · (b · c)</span><br>Agrupación libre.</p>
+          </div>
+          <div class="mini-card">
+            <h4>M4. Neutro (Mult.)</h4>
+            <p><span class="formula">a · 1 = a</span><br>Existe el uno como neutro multiplicativo.</p>
+          </div>
+          <div class="mini-card">
+            <h4>M5. Inverso (Mult.)</h4>
+            <p><span class="formula">a · a⁻¹ = 1</span> (si a ≠ 0)<br>Todo número no nulo tiene recíproco.</p>
+          </div>
+          <div class="mini-card">
+            <h4>D. Distributiva</h4>
+            <p><span class="formula">a · (b + c) = a·b + a·c</span><br>Conecta suma y multiplicación.</p>
+          </div>
+        </div>
+
+        <h3>Axiomas de Orden</h3>
+        <p>Definen la relación "menor que" (<) en ℝ.</p>
+
+        <div class="card-grid">
+          <div class="mini-card">
+            <h4>O1. Tricotomía</h4>
+            <p>Para cualesquiera a, b ∈ ℝ, exactamente UNA es cierta: <span class="formula">a < b</span>, <span class="formula">a = b</span>, o <span class="formula">a > b</span></p>
+          </div>
+          <div class="mini-card">
+            <h4>O2. Transitividad</h4>
+            <p>Si <span class="formula">a < b</span> y <span class="formula">b < c</span>, entonces <span class="formula">a < c</span></p>
+          </div>
+          <div class="mini-card">
+            <h4>O3. Suma</h4>
+            <p>Si <span class="formula">a < b</span>, entonces <span class="formula">a + c < b + c</span> para todo c</p>
+          </div>
+          <div class="mini-card">
+            <h4>O4. Multiplicación</h4>
+            <p>Si <span class="formula">a < b</span> y <span class="formula">c > 0</span>, entonces <span class="formula">ac < bc</span></p>
+          </div>
+        </div>
+
+        <div class="warning-box">
+          <strong><i class="fas fa-exclamation-triangle"></i> ¡Cuidado!</strong>
+          <p>Si multiplicas una desigualdad por un número NEGATIVO, ¡se invierte el signo! Si <span class="formula">a < b</span> y <span class="formula">c < 0</span>, entonces <span class="formula">ac > bc</span></p>
+        </div>
+
+        <h3>Axioma del Supremo (Completitud)</h3>
+        <p>Este axioma distingue a ℝ de ℚ y garantiza que no hay "huecos" en la recta real.</p>
+
+        <div class="tip-box">
+          <strong><i class="fas fa-gem"></i> Axioma del Supremo</strong>
+          <p>Todo subconjunto no vacío de ℝ que esté acotado superiormente tiene supremo (mínima cota superior) en ℝ.</p>
+        </div>
+
+        <h4>Conceptos relacionados</h4>
+        <ul>
+          <li><strong>Cota superior:</strong> M es cota superior de A si <span class="formula">∀x ∈ A: x ≤ M</span></li>
+          <li><strong>Cota inferior:</strong> m es cota inferior de A si <span class="formula">∀x ∈ A: x ≥ m</span></li>
+          <li><strong>Supremo (sup):</strong> La MENOR de las cotas superiores</li>
+          <li><strong>Máximo:</strong> Supremo que pertenece al conjunto</li>
+          <li><strong>Mínimo:</strong> Ínfimo que pertenece al conjunto</li>
+        </ul>
+
+        <h3>Inverso Multiplicativo</h3>
+        <ul>
+          <li>Para todo <span class="formula">a ≠ 0</span>, existe <span class="formula">a⁻¹ = 1/a</span> tal que <span class="formula">a · a⁻¹ = 1</span></li>
+          <li><span class="formula">(a⁻¹)⁻¹ = a</span></li>
+          <li><span class="formula">(ab)⁻¹ = a⁻¹ · b⁻¹</span></li>
+        </ul>
+
+        <h3>Consecuencias de los axiomas de orden</h3>
+        <ul>
+          <li>Si <span class="formula">a < b</span> y <span class="formula">c < d</span>, entonces <span class="formula">a + c < b + d</span></li>
+          <li>Si <span class="formula">0 < a < b</span>, entonces <span class="formula">0 < b⁻¹ < a⁻¹</span></li>
+          <li><span class="formula">a² ≥ 0</span> para todo a ∈ ℝ</li>
+          <li><span class="formula">1 > 0</span></li>
+          <li>Si <span class="formula">a > 0</span>, entonces <span class="formula">a⁻¹ > 0</span></li>
+          <li>Si <span class="formula">a < 0</span>, entonces <span class="formula">a⁻¹ < 0</span></li>
+        </ul>
+
+        <h3>Raíz Cuadrada</h3>
+        <ul>
+          <li>Para todo <span class="formula">a ≥ 0</span>, existe un único <span class="formula">b ≥ 0</span> tal que <span class="formula">b² = a</span></li>
+          <li>Notación: <span class="formula">b = √a</span></li>
+          <li><span class="formula">√(ab) = √a · √b</span> (para a, b ≥ 0)</li>
+          <li><span class="formula">√(a/b) = √a / √b</span> (para a ≥ 0, b > 0)</li>
+          <li><span class="formula">(√a)² = a</span></li>
+          <li><span class="formula">√(a²) = |a|</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- SECCIÓN 7: VALOR ABSOLUTO  -->
+    <article class="section" id="valor-absoluto">
+      <div class="section-header">
+        <div class="section-icon"><i class="fas fa-arrows-left-right"></i></div>
+        <div class="section-title">
+          <span class="section-number">SECCIÓN 07</span>
+          <h2>Valor Absoluto</h2>
+        </div>
+      </div>
+      <div class="content">
+        <h3>Definición</h3>
+        <p>El valor absoluto de a se define como:</p>
+        <ul>
+          <li><span class="formula">|a| = a</span> si <span class="formula">a ≥ 0</span></li>
+          <li><span class="formula">|a| = -a</span> si <span class="formula">a < 0</span></li>
+        </ul>
+        <p>Equivalentemente: <span class="formula">|a| = √(a²)</span></p>
+
+        <h3>Propiedades</h3>
+        <ul>
+          <li><span class="formula">|a| ≥ 0</span> (siempre no negativo)</li>
+          <li><span class="formula">|a| = 0 ↔ a = 0</span></li>
+          <li><span class="formula">|-a| = |a|</span></li>
+          <li><span class="formula">|ab| = |a| · |b|</span></li>
+          <li><span class="formula">|a/b| = |a| / |b|</span> (b ≠ 0)</li>
+          <li><span class="formula">|a|² = a²</span></li>
+        </ul>
+
+
+        <h3>Equivalencias útiles para ecuaciones</h3>
+        <ul>
+          <li><span class="formula">|x| = a ↔ x = a ∨ x = -a</span> (si a ≥ 0)</li>
+          <li><span class="formula">|x| < a ↔ -a < x < a</span> (si a > 0)</li>
+          <li><span class="formula">|x| > a ↔ x < -a ∨ x > a</span> (si a ≥ 0)</li>
+          <li><span class="formula">|x| ≤ a ↔ -a ≤ x ≤ a</span> (si a ≥ 0)</li>
+          <li><span class="formula">|x| ≥ a ↔ x ≤ -a ∨ x ≥ a</span> (si a ≥ 0)</li>
+        </ul>
+
+        <div class="tip-box">
+          <strong><i class="fas fa-lightbulb"></i> Tip para recordar</strong>
+          <p>El valor absoluto representa la DISTANCIA al cero en la recta numérica. <span class="formula">|x - a|</span> es la distancia entre x y a.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==================== SECCIÓN 8: INTERVALOS ==================== -->
+    <article class="section" id="intervalos">
+      <div class="section-header">
+        <div class="section-icon"><i class="fas fa-arrows-left-right-to-line"></i></div>
+        <div class="section-title">
+          <span class="section-number">SECCIÓN 08</span>
+          <h2>Intervalos</h2>
+        </div>
+      </div>
+      <div class="content">
+        <h3>Tipos de intervalos</h3>
+        
+        <h4>Intervalos acotados</h4>
+        <ul>
+          <li><strong>Abierto:</strong> <span class="formula">(a, b) = {x ∈ ℝ | a < x < b}</span></li>
+          <li><strong>Cerrado:</strong> <span class="formula">[a, b] = {x ∈ ℝ | a ≤ x ≤ b}</span></li>
+          <li><strong>Semiabierto izq:</strong> <span class="formula">(a, b] = {x ∈ ℝ | a < x ≤ b}</span></li>
+          <li><strong>Semiabierto der:</strong> <span class="formula">[a, b) = {x ∈ ℝ | a ≤ x < b}</span></li>
+        </ul>
+
+        <h4>Intervalos no acotados</h4>
+        <ul>
+          <li><span class="formula">(a, +∞) = {x ∈ ℝ | x > a}</span></li>
+          <li><span class="formula">[a, +∞) = {x ∈ ℝ | x ≥ a}</span></li>
+          <li><span class="formula">(-∞, b) = {x ∈ ℝ | x < b}</span></li>
+          <li><span class="formula">(-∞, b] = {x ∈ ℝ | x ≤ b}</span></li>
+          <li><span class="formula">(-∞, +∞) = ℝ</span></li>
+        </ul>
+
+        <div class="warning-box">
+          <strong><i class="fas fa-exclamation-triangle"></i> Importante</strong>
+          <p>El infinito (∞) NUNCA se incluye, siempre va con paréntesis: <span class="formula">(a, +∞)</span>, nunca <span class="formula">[a, +∞]</span></p>
+        </div>
+
+        <h3>Propiedades de intervalos</h3>
+        <ul>
+          <li>La unión de intervalos puede NO ser un intervalo</li>
+          <li>La intersección de intervalos es un intervalo (o vacío)</li>
+          <li><span class="formula">[a, b] ∩ [c, d] = [max(a,c), min(b,d)]</span> si no es vacío</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- SECCIÓN 9: ECUACIONES -->
+    <article class="section" id="ecuaciones">
+      <div class="section-header">
+        <div class="section-icon"><i class="fas fa-superscript"></i></div>
+        <div class="section-title">
+          <span class="section-number">SECCIÓN 09</span>
+          <h2>Ecuaciones e Inecuaciones</h2>
+        </div>
+      </div>
+      <div class="content">
+        <h3>Ecuaciones lineales (o de primer grado)</h3>
+        <p>Forma: <span class="formula">ax + b = 0</span> → Solución: <span class="formula">x = -b/a</span> (si a ≠ 0)</p>
+
+        <h3>Ecuaciones cuadráticas</h3>
+        <p>Forma: <span class="formula">ax² + bx + c = 0</span></p>
+        <p><strong>Fórmula general:</strong></p>
+        <p style="text-align: center; font-size: 1.2rem;"><span class="formula">x = (-b ± √(b² - 4ac)) / 2a</span></p>
+
+        <h4>Discriminante</h4>
+        <p><span class="formula">Δ = b² - 4ac</span></p>
+        <ul>
+          <li><span class="formula">Δ > 0</span> → Dos soluciones reales distintas</li>
+          <li><span class="formula">Δ = 0</span> → Una solución real (doble)</li>
+          <li><span class="formula">Δ < 0</span> → No hay soluciones reales</li>
+        </ul>
+
+        <h3>Teoremas de ecuaciones</h3>
+        <ul>
+          <li><strong>Suma de raíces:</strong> <span class="formula">x₁ + x₂ = -b/a</span></li>
+          <li><strong>Producto de raíces:</strong> <span class="formula">x₁ · x₂ = c/a</span></li>
+        </ul>
+
+        <h3>Inecuaciones</h3>
+        
+        <h4>Inecuaciones lineales</h4>
+        <ul>
+          <li>Se resuelven igual que ecuaciones, PERO:</li>
+          <li>Al multiplicar/dividir por negativo → ¡Cambiar el sentido!</li>
+        </ul>
+
+        <h4>Inecuaciones de segundo grado</h4>
+        <p>Para <span class="formula">ax² + bx + c > 0</span> (o <, ≥, ≤):</p>
+        <ol>
+          <li>Encontrar las raíces de <span class="formula">ax² + bx + c = 0</span></li>
+          <li>Analizar el signo en cada intervalo</li>
+          <li>Considerar si a > 0 (parábola abre arriba) o a < 0 (abre abajo)</li>
+        </ol>
+
+        <div class="tip-box">
+          <strong><i class="fas fa-chart-line"></i> Tip visual</strong>
+          <p>Si <span class="formula">a > 0</span>: la parábola es positiva FUERA de las raíces. Si <span class="formula">a < 0</span>: es positiva ENTRE las raíces.</p>
+        </div>
+
+        <h4>Inecuaciones con valor absoluto</h4>
+        <ul>
+          <li><span class="formula">|f(x)| < k</span> → <span class="formula">-k < f(x) < k</span></li>
+          <li><span class="formula">|f(x)| > k</span> → <span class="formula">f(x) < -k ∨ f(x) > k</span></li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ==================== SECCIÓN 10: TRIGONOMETRÍA ==================== -->
+    <article class="section" id="trigonometria">
+      <div class="section-header">
+        <div class="section-icon"><i class="fas fa-draw-polygon"></i></div>
+        <div class="section-title">
+          <span class="section-number">SECCIÓN 10</span>
+          <h2>Trigonometría</h2>
+        </div>
+      </div>
+      <div class="content">
+        <h3>Teorema de Pitágoras</h3>
+        <p>En un triángulo rectángulo con catetos a, b e hipotenusa c:</p>
+        <p style="text-align: center;"><span class="formula">a² + b² = c²</span></p>
+
+        <h3>Funciones trigonométricas básicas</h3>
+        <p>En un triángulo rectángulo:</p>
+        <ul>
+          <li><span class="formula">sen(θ) = opuesto / hipotenusa</span></li>
+          <li><span class="formula">cos(θ) = adyacente / hipotenusa</span></li>
+          <li><span class="formula">tan(θ) = opuesto / adyacente = sen(θ) / cos(θ)</span></li>
+        </ul>
+
+        <h4>Funciones recíprocas</h4>
+        <ul>
+          <li><span class="formula">csc(θ) = 1 / sen(θ)</span></li>
+          <li><span class="formula">sec(θ) = 1 / cos(θ)</span></li>
+          <li><span class="formula">cot(θ) = 1 / tan(θ) = cos(θ) / sen(θ)</span></li>
+        </ul>
+
+        <h3>Radianes y grados</h3>
+        <ul>
+          <li><span class="formula">π rad = 180°</span></li>
+          <li><strong>Grados a radianes:</strong> <span class="formula">rad = grados × (π/180)</span></li>
+          <li><strong>Radianes a grados:</strong> <span class="formula">grados = rad × (180/π)</span></li>
+        </ul>
+
+        <h4>Ángulos notables</h4>
+        <table class="truth-table">
+          <tr><th>Grados</th><th>Radianes</th><th>sen</th><th>cos</th><th>tan</th></tr>
+          <tr><td>0°</td><td>0</td><td>0</td><td>1</td><td>0</td></tr>
+          <tr><td>30°</td><td>π/6</td><td>1/2</td><td>√3/2</td><td>√3/3</td></tr>
+          <tr><td>45°</td><td>π/4</td><td>√2/2</td><td>√2/2</td><td>1</td></tr>
+          <tr><td>60°</td><td>π/3</td><td>√3/2</td><td>1/2</td><td>√3</td></tr>
+          <tr><td>90°</td><td>π/2</td><td>1</td><td>0</td><td>∄</td></tr>
+        </table>
+
+        <h3>Círculo unitario vs no unitario</h3>
+        <h4>Círculo unitario (r = 1)</h4>
+        <ul>
+          <li><span class="formula">x = cos(θ)</span></li>
+          <li><span class="formula">y = sen(θ)</span></li>
+        </ul>
+
+        <h4>Círculo no unitario (radio r)</h4>
+        <ul>
+          <li><span class="formula">x = r · cos(θ)</span></li>
+          <li><span class="formula">y = r · sen(θ)</span></li>
+          <li><span class="formula">sen(θ) = y/r</span></li>
+          <li><span class="formula">cos(θ) = x/r</span></li>
+        </ul>
+
+        <h3>Identidades Trigonométricas</h3>
+
+        <div class="identity-group">
+          <h4>🔷 Identidades Pitagóricas</h4>
+          <ul>
+            <li><span class="formula">sen²(θ) + cos²(θ) = 1</span></li>
+            <li><span class="formula">1 + tan²(θ) = sec²(θ)</span></li>
+            <li><span class="formula">1 + cot²(θ) = csc²(θ)</span></li>
+          </ul>
+        </div>
+
+        <div class="identity-group">
+          <h4>🔷 Identidades de cociente</h4>
+          <ul>
+            <li><span class="formula">tan(θ) = sen(θ) / cos(θ)</span></li>
+            <li><span class="formula">cot(θ) = cos(θ) / sen(θ)</span></li>
+          </ul>
+        </div>
+
+        <div class="identity-group">
+          <h4>🔷 Identidades para negativos</h4>
+          <ul>
+            <li><span class="formula">sen(-θ) = -sen(θ)</span> (función impar)</li>
+            <li><span class="formula">cos(-θ) = cos(θ)</span> (función par)</li>
+            <li><span class="formula">tan(-θ) = -tan(θ)</span> (función impar)</li>
+          </ul>
+        </div>
+
+        <div class="identity-group">
+          <h4>🔷 Identidades de cofunción</h4>
+          <ul>
+            <li><span class="formula">sen(π/2 - θ) = cos(θ)</span></li>
+            <li><span class="formula">cos(π/2 - θ) = sen(θ)</span></li>
+            <li><span class="formula">tan(π/2 - θ) = cot(θ)</span></li>
+          </ul>
+        </div>
+
+        <div class="identity-group">
+          <h4>🔷 Identidades de suma de ángulos</h4>
+          <ul>
+            <li><span class="formula">sen(α + β) = sen(α)cos(β) + cos(α)sen(β)</span></li>
+            <li><span class="formula">cos(α + β) = cos(α)cos(β) - sen(α)sen(β)</span></li>
+            <li><span class="formula">tan(α + β) = (tan(α) + tan(β)) / (1 - tan(α)tan(β))</span></li>
+          </ul>
+        </div>
+
+        <div class="identity-group">
+          <h4>🔷 Identidades de resta de ángulos</h4>
+          <ul>
+            <li><span class="formula">sen(α - β) = sen(α)cos(β) - cos(α)sen(β)</span></li>
+            <li><span class="formula">cos(α - β) = cos(α)cos(β) + sen(α)sen(β)</span></li>
+            <li><span class="formula">tan(α - β) = (tan(α) - tan(β)) / (1 + tan(α)tan(β))</span></li>
+          </ul>
+        </div>
+
+        <div class="identity-group">
+          <h4>🔷 Identidades de ángulo doble</h4>
+          <ul>
+            <li><span class="formula">sen(2θ) = 2sen(θ)cos(θ)</span></li>
+            <li><span class="formula">cos(2θ) = cos²(θ) - sen²(θ)</span></li>
+            <li><span class="formula">cos(2θ) = 2cos²(θ) - 1</span></li>
+            <li><span class="formula">cos(2θ) = 1 - 2sen²(θ)</span></li>
+            <li><span class="formula">tan(2θ) = 2tan(θ) / (1 - tan²(θ))</span></li>
+          </ul>
+        </div>
+
+        <div class="identity-group">
+          <h4>🔷 Identidades de ángulo mitad</h4>
+          <ul>
+            <li><span class="formula">sen(θ/2) = ±√((1 - cos(θ))/2)</span></li>
+            <li><span class="formula">cos(θ/2) = ±√((1 + cos(θ))/2)</span></li>
+            <li><span class="formula">tan(θ/2) = ±√((1 - cos(θ))/(1 + cos(θ)))</span></li>
+            <li><span class="formula">tan(θ/2) = sen(θ)/(1 + cos(θ)) = (1 - cos(θ))/sen(θ)</span></li>
+          </ul>
+        </div>
+
+        <div class="tip-box">
+          <strong><i class="fas fa-lightbulb"></i> Para el signo ± en ángulo mitad</strong>
+          <p>El signo depende del cuadrante donde está θ/2. Analiza en qué cuadrante cae para elegir + o -.</p>
+        </div>
+
+        <h3>Funciones algebraicas vs trigonométricas</h3>
+        <ul>
+          <li><strong>Algebraicas:</strong> Polinomios, racionales, radicales (operaciones finitas)</li>
+          <li><strong>Trigonométricas:</strong> sen, cos, tan y sus inversas (trascienden el álgebra)</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- ==================== SECCIÓN FINAL: TIPS ==================== -->
+    <article class="section" id="tips">
+      <div class="section-header">
+        <div class="section-icon"><i class="fas fa-graduation-cap"></i></div>
+        <div class="section-title">
+          <span class="section-number">BONUS</span>
+          <h2>Tips para Sobrevivir al Curso </h2>
+        </div>
+      </div>
+      <div class="content">
+        <div class="card-grid">
+          <div class="mini-card">
+            <h4>📝 Practica demostraciones</h4>
+            <p>No basta con leer, tienes que escribir las demostraciones tú misma para entenderlas de verdad.</p>
+          </div>
+          <div class="mini-card">
+            <h4>🔗 Conecta conceptos</h4>
+            <p>Lógica y conjuntos están muy relacionados. De Morgan funciona igual en ambos.</p>
+          </div>
+          <div class="mini-card">
+            <h4>🎯 Memoriza lo esencial</h4>
+            <p>Axiomas de campo, tablas de verdad básicas e identidades pitagóricas son fundamentales.</p>
+          </div>
+          <div class="mini-card">
+            <h4> Visualiza</h4>
+            <p>El círculo unitario es tu mejor amigo en trigonometría. Dibújalo siempre.</p>
+          </div>
+          <div class="mini-card">
+            <h4> Cuidado con signos</h4>
+            <p>En desigualdades: multiplicar por negativo invierte el signo. Error muy común.</p>
+          </div>
+          <div class="mini-card">
+            <h4> Estudia en grupo</h4>
+            <p>Explicarle a alguien más es la mejor forma de aprender y detectar lo que no entiendes.</p>
+          </div>
+        </div>
+
+        <div class="success-box">
+          <strong><i class="fas fa-heart"></i> Mensaje final</strong>
+          <p>Este curso puede parecerte difícil al principio, pero sienta las bases de TODO lo que viene después. ¡Tú puedes! 💙✨</p>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>Hecho con <span class="heart">♥</span> para la Fati del futuro</p>
+    <p>Fundamentos de las Matemáticas · 2025</p>
+    <div class="footer-links">
+      <a href="#proposiciones">Ir al inicio</a>
+    </div>
+  </footer>
+
+  <!-- ===== BOTÓN VOLVER ARRIBA ===== -->
+  <button class="back-to-top" onclick="scrollToTop()" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // Toggle tema claro/oscuro
+    function toggleTheme() {
+      const body = document.body;
+      const icon = document.getElementById('theme-icon');
+      
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme');
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+      }
+    }
+
+    // Botón volver arriba
+    const backToTop = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Animación de secciones al hacer scroll
+    const sections = document.querySelectorAll('.section');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+      section.style.opacity = '0';
+      section.style.transform = 'translateY(30px)';
+      section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
